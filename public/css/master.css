@@ -1,0 +1,361 @@
+body
+{
+    margin: 10px;
+    background: url(/img/bg.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+}
+.gigi{
+    background-color: red;
+}
+.container{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card
+{
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 10px solid rgba(255,255,255,.2);
+    box-shadow: 10px 10px 15px rgba(0,0,0,.5);
+}
+
+.imgBx{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgb(76, 134, 241);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loginBox{
+    width: 100%;
+    height: 440px;
+    box-sizing: border-box;
+    padding: 35px 40px;
+    background-color: white;
+}
+
+h3 { 
+    text-align:center; 
+    margin-bottom:50px; 
+    color:white; 
+}
+
+h3 span {  
+    display:block;
+    color:white; 
+}
+
+h3 small { 
+    font-weight:normal; 
+    color:white; 
+    display:block; 
+}
+
+/* form starting stylings ------------------------------- */
+.group        { 
+    position:relative; 
+    margin-bottom:40px; 
+}
+input.text-input         {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+}
+input:focus     { outline:none; }
+
+/* LABEL ======================================= */
+label.text-box          {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label     {
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar  { position:relative; display:block; width:315px; }
+.bar:before, .bar:after   {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+}
+.bar:before {
+    left:50%;
+}
+.bar:after {
+    right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+}
+
+label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type=checkbox].css-checkbox {
+        position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height:1px; 
+    width:1px; 
+    margin:-1px; 
+    padding:0;
+    border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left:20px;
+    height:15px; 
+    display:inline-block;
+    line-height:15px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:15px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -15px;
+}
+
+.css-label{
+    color: #999 !important;
+    background-image:url(/img/dark-check-green.png);
+}
+
+.lite-green-check{
+    background-image:url(/img/lite-green-check.png);
+}
+
+/* BUTTON LOGIN dan LOGOUT */
+.btn-login{
+    font-size: 1.3em;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-family: sans-serif;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 30px;
+}
+
+.btn-logout{
+    margin-top:20px;
+    font-size: 1.3em;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-family: sans-serif;
+    background: linear-gradient(90deg, #f40353, #551137, #ad5522, #f40353);
+    background-size: 400%;
+    border-radius: 30px;
+}
+
+.link-dash{
+    display: block;
+    text-align: center;
+    font-size: 1.3em;
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
+    line-height: 35px;
+    background: linear-gradient(90deg, #4456be, #617eaa, #33916a, #4456be);
+    background-size: 400%;
+    border:2px outset #e2e2e2;
+    border-radius: 30px;
+}
+
+.btn-login:hover, .btn-logout:hover, .link-dash:hover{
+    animation:  animate 8s linear infinite;
+}
+@keyframes animate {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
+/* HELLO */
+.hello{
+    margin-bottom: 3em;
+}
+.hello p {
+    font-size: 1.3em;
+    text-align: center;
+}
+.hello i{
+    font-weight: bold;
+    text-decoration: underline;
+    color: #274406;
+}
+
+.pesan-fail{
+    background-color: white;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+   .container{
+       height: 100vh;
+   }
+   .card {
+       width: 700px;
+   }
+   .imgBx{
+       height: 440px;
+   }
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .container{
+        height: 100vh;
+    }
+    .card {
+        width: 700px;
+    }
+    .imgBx{
+        height: 440px;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .container{
+        height: 100vh;
+    }
+    .card {
+        width: 700px;
+    }
+    .imgBx{
+        height: 440px;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .container{
+        height: 100vh;
+    }
+    .card {
+        width: 700px;
+    }
+    .imgBx{
+        height: 440px;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    .container{
+        height: 100vh;
+    }
+    .card {
+        width: 700px;
+    }
+    .imgBx{
+        height: 440px;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .container{
+        height: 100vh;
+    }
+    .card {
+        width: 100%;
+        flex-direction: column;
+    }
+    .imgBx{
+        height: 50px;
+        background-color: #3b5561;
+        background-image: none;
+    }
+    
+  }
+
+#container {
+	margin: 0px auto;
+	width: 500px;
+	height: 375px;
+	border: 10px #333 solid;
+}
+#videoElement {
+	width: 500px;
+	height: 375px;
+	background-color: #666;
+}
+
+.myIp{
+    color: white;
+    z-index: 100;
+}
